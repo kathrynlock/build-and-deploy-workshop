@@ -1,0 +1,60 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    background: #757BC8; 
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    background: #A6AAE2;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    float:right;
+}
+
+.home-button {
+    color: white;
+    float:left;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 45px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size:25px;
+}
+
+
