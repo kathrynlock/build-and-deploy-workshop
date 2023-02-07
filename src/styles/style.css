@@ -59,7 +59,7 @@ nav a {
     font-size: 30px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #031D44;
+    color: white;
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0px 20px;
@@ -70,18 +70,18 @@ nav a {
 
   
 .nav-link:hover {
-    opacity: 1;
+    opacity: 0.75;
   }
   
-  .nav-link::before {
+.nav-link::before {
     transition: 300ms;
     height: 5px;
     content: "";
     position: absolute;
-    background-color: #031D44;
+    background-color: white;
   }
   
-  .nav-link-ltr::before {
+.nav-link-ltr::before {
     width: 0%;
     bottom: 10px;
   }
@@ -90,3 +90,14 @@ nav a {
     width: 100%;
   }
   
+  a.active::before {
+    opacity: 1;
+    width: 100%;
+    height: 5px; 
+    content: "";
+    background-color: white;
+  }
+
+  a.active {
+    opacity: 1;
+  }
