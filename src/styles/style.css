@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 body {
@@ -103,16 +103,17 @@ nav a {
   }
   
   .text-header {
-    font-size: 75px;
+    padding-bottom: -20px;
+    font-size: 65px;
     font-weight: 500;
     color: white;
-    font-family: 'Oswald', 'Serif';
+    font-family: 'Poppins', 'Serif';
     border-bottom: 3px solid white;
-    padding-bottom: 4px;
+    margin-bottom: 10px;
   }
 
   .page-text {
-    font-family: "Oswald", "Serif";
+    font-family: "Poppins", "Serif";
     color: white;
     font-weight: 400;
     font-size: 44px;
@@ -151,7 +152,7 @@ nav a {
   .heading {
     margin-top: -20px;
     margin-bottom: -15px;
-    font-family: "Oswald";
+    font-family: "Poppins";
     font-weight: 550;
     font-size: 75px;
     color: white;
@@ -182,4 +183,13 @@ nav a {
     margin-right: 600px;
     background: white;
     height: 3px;
+  }
+
+  .small-page-text {
+    margin-top: 15px;
+    margin-right: 30%;
+    font-family: "Poppins", "Serif";
+    color: white;
+    font-weight: 50;
+    font-size: 20px;
   }
