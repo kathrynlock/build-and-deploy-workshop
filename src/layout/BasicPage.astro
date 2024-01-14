@@ -1,9 +1,11 @@
 ---
 import Base from './Base.astro'
+import Footer from '../components/Footer.astro'
 const {title} = Astro.props.content
 ---
 
 <Base title={title}>
     <h1>{title}</h1>
     <slot></slot>
+    <Footer/>
 </Base>
