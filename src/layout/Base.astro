@@ -1,6 +1,7 @@
 ---
 import { AstroComponentInstance } from "astro/dist/runtime/server";
 import '../styles/style.css'
+import Footer from"../components/Footer.astro"
 console.log(Astro.props)
 const {title} = Astro.props
 const pathname = new URL(Astro.request.url).pathname;
@@ -21,7 +22,7 @@ const currentPath = pathname.slice(1);
 
 </head>
 
-<body>
+<body class="min-h-screen grid grid-rows-[auto,1fr,auto]">
     <header class="site-header">
         <div class = "container">
         <a class="home-button" href="/">KATE LOCK</a>
@@ -33,5 +34,6 @@ const currentPath = pathname.slice(1);
         </div> 
     </header>
     <slot>this is the default yay</slot>
+    <Footer/>
 </body>
 </html>
