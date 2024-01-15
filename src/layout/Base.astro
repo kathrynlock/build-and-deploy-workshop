@@ -1,49 +1,70 @@
 ---
-import '../styles/style.css'
-import Footer from"../components/Footer.astro"
-console.log(Astro.props)
+import "../styles/style.css";
+import Footer from "../components/Footer.astro";
+console.log(Astro.props);
 const {
     title = "Kate Lock",
     description = "Here's my small corner of the internet",
-    image = "https://katelock.dev/images/kate-header.png"} = Astro.props
+    image = "https://katelock.dev/images/kate-header.png",
+} = Astro.props;
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);  
+const currentPath = pathname.slice(1);
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content={description}/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content={Astro.url}/>
-    <meta property="og:title" content={title}/>
-    <meta property="og:description" content={description}/>
-    <meta property="og:image" content={image}/>
-    <meta property="og:image:alt" content={description}/>
-	<title>{title}</title>
+    <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:image:alt" content={description} />
+        <title>{title}</title>
+    </head>
 
-</head>
-
-<body>
-    <header class="site-header">
-        <div class = "container">
-        <a class="home-button" href="/">KATE LOCK</a>
-        <nav class="navbar">
-            <a class={`${currentPath === "about" ? "active" : ""} nav-link nav-link-ltr`} href="/about">About</a>
-            <a class={`${currentPath === "contact" ? "active" : ""} nav-link nav-link-ltr`} href="/contact">Contact</a>
-            <a class={`${currentPath === "portfolio" ? "active" : ""} nav-link nav-link-ltr`} href="/portfolio">Portfolio</a>
-        </nav>
-        </div> 
-    </header>
-    <slot>this is the default yay</slot>
-    <img src="images/kate-header.png" alt="bad code"/>
-    <Footer/>
-</body>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <a class="home-button" href="/">KATE LOCK</a>
+                <nav class="navbar">
+                    <a
+                        class={`${
+                            currentPath === "about" ? "active" : ""
+                        } nav-link nav-link-ltr`}
+                        href="/about">About</a
+                    >
+                    <a
+                        class={`${
+                            currentPath === "contact" ? "active" : ""
+                        } nav-link nav-link-ltr`}
+                        href="/contact">Contact</a
+                    >
+                    <a
+                        class={`${
+                            currentPath === "portfolio" ? "active" : ""
+                        } nav-link nav-link-ltr`}
+                        href="/portfolio">Portfolio</a
+                    >
+                </nav>
+            </div>
+        </header>
+        <slot>this is the default yay</slot>
+        <Footer />
+    </body>
 </html>
