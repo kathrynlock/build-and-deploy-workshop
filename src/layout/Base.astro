@@ -5,7 +5,7 @@ console.log(Astro.props)
 const {
     title = "Kate Lock",
     description = "Here's my small corner of the internet",
-    image = "/src/layout/images/kate-header.png"} = Astro.props
+    image = "/src/public/images/kate-header.png"} = Astro.props
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1);  
 ---
@@ -43,6 +43,7 @@ const currentPath = pathname.slice(1);
         </div> 
     </header>
     <slot>this is the default yay</slot>
+    <img src="/src/layout/images/kate-header.png" alt="bad code"/>
     <Footer/>
 </body>
 </html>
