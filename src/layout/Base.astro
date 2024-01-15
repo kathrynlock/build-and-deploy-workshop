@@ -22,14 +22,14 @@ const currentPath = pathname.slice(1);
 
 </head>
 
-<body class="min-h-screen grid grid-rows-[auto,1fr,auto]">
+<body>
     <header class="site-header">
         <div class = "container">
         <a class="home-button" href="/">KATE LOCK</a>
         <nav class="navbar">
-            <a class={`${currentPath === "about/" ? "active" : ""} nav-link nav-link-ltr`} href="/about">About</a>
-            <a class={`${currentPath === "contact/" ? "active" : ""} nav-link nav-link-ltr`} href="/contact">Contact</a>
-            <a class={`${currentPath === "portfolio/" ? "active" : ""} nav-link nav-link-ltr`} href="/portfolio">Portfolio</a>
+            <a class={`${currentPath === "about" ? "active" : ""} nav-link nav-link-ltr`} href="/about">About</a>
+            <a class={`${currentPath === "contact" ? "active" : ""} nav-link nav-link-ltr`} href="/contact">Contact</a>
+            <a class={`${currentPath === "portfolio" ? "active" : ""} nav-link nav-link-ltr`} href="/portfolio">Portfolio</a>
         </nav>
         </div> 
     </header>
