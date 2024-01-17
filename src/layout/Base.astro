@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import "../styles/style.css";
 import Footer from "../components/Footer.astro";
 console.log(Astro.props);
@@ -35,14 +36,16 @@ const currentPath = pathname.slice(1);
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
         <meta property="og:image:alt" content={description} />
+        <meta property="theme-color" content="#656bbe" />
 
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content={Astro.url}/>
-        <meta property="twitter:title" content={title}/>
-        <meta property="twitter:description" content={description}/>
-        <meta property="twitter:image" content={image}/>
-        <meta property="twitter:image:alt" content={title}/>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={image} />
+        <meta property="twitter:image:alt" content={title} />
         <title>{title}</title>
+        <ViewTransitions />
     </head>
 
     <body>
@@ -71,7 +74,9 @@ const currentPath = pathname.slice(1);
                 </nav>
             </div>
         </header>
-        <slot>this is the default yay</slot>
+        <div class="py-8">
+            <slot>this is the default yay</slot>
+        </div>
         <Footer />
     </body>
 </html>
