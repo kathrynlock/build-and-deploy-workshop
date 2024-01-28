@@ -1,10 +1,36 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+
+export const getStaticPaths = async () => {
+    const projects = await getCollection("projects");
+
+    const paths = projects.map((project) => {
+        return {
+            params: {
+                slug: project.slug,
+            },
+            props: {
+                project,
+            },
+        };
+    });
+
+    return paths;
+};
+
+type Props = {
+    project: CollectionEntry<"porjects">;
+};
+
+const { project } = Astro.props;
+const { Content, headings } = await project.render();
+---
+
 <Base title="Blog - Boba Cat Association">
     <p class="text-zinc-800 text-2xl mb-24 max-sm:mb-14">
         Join the community for news about Boba Cats around the world
     </p>
 
-    <PostList posts={posts} />
-    <div class="mb-36">
-        <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
-    </div>
+    <ProjectList projects={projects} />
+    <div class="mb-36"></div>
 </Base>
